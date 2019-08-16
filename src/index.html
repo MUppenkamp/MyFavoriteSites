@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
@@ -11,18 +12,129 @@
 
     <title>chayns® ESNext Template</title>
 </head>
+
 <body>
-<div id="app">
     <div class="tapp">
-        <div class="userInfo">
-            <p id="intro">
-            <div class="btnWrapper">
-                <button id="loginBtn" class="button" />
+
+        <div class="tapp__intro">
+            <h1>My favorite Sites</h1>
+            <p>Hier findest du meine Lieblinsseeiten!</p>
+            <p>Du denkst, dass du eine ausergewöhnliche Seite hast? Dann registriere dich hier.</p>
+        </div>
+
+        <div class="tapp__content">
+
+            <div class="accordion" data-group="1">
+                <div class="accordion__head">
+                    <div class="accordion__head__icon accordion--trigger">
+                        <i class="ts-angle-right"></i>
+                    </div>
+                    <div class="accordion__head__title  accordion--trigger">
+                        Favorite Sites
+                    </div>
+                    <div class="accordion__head__right  accordion--trigger">
+                        <div class="badge">
+                            Badge
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion__body">
+                    <div class="itemWrapper">
+                        <div class="accordion__item" >
+                            <div class="imageWrapper">
+                                <img class="image"
+                                    src="//chayns.tobit.com/storage/77893-11872/Images/icon-72.png?_=1565958881888"
+                                    style="width: 100%" alt="">
+                            </div>
+                            <div class="subline">
+                                your-concerts
+                            </div>
+                        </div>
+                        <div class="accordion__item" >
+                            <div class="imageWrapper">
+                                <img class="image"
+                                    src="//chayns.tobit.com/storage/64944-20536/Images/icon-72.png?_=1565958881888"
+                                    style="width: 100%" alt="">
+                            </div>
+                            <div class="subline">
+                                I love my French Bulldog
+                            </div>
+                        </div>
+                        <div class="accordion__item" >
+                            <div class="imageWrapper">
+                                <img class="image"
+                                    src="//chayns.tobit.com/storage/77893-11893/Images/icon-72.png?_=1565958865653"
+                                    style="width: 100%" alt="">
+                            </div>
+                            <div class="subline">
+                                Marvins Cupcake
+                            </div>
+                        </div>
+                        <div class="accordion__item" >
+                            <div class="imageWrapper">
+                                <img class="image"
+                                    src="//chayns.tobit.com/storage/77893-11833/Images/icon-72.png?_=1565960418734"
+                                    style="width: 100%" alt="">
+                            </div>
+                            <div class="subline">
+                                Dreiviertel
+                            </div>
+                        </div>
+                        <div class="accordion__item" >
+                            <div class="imageWrapper">
+                                <img class="image"
+                                    src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg"
+                                    style="width: 100%" alt="">
+                            </div>
+                            <div class="subline">
+                                Name
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="accordion" data-group="1">
+                <div class="accordion__head">
+                    <div class="accordion__head__icon accordion--trigger">
+                        <i class="ts-angle-right"></i>
+                    </div>
+                    <div class="accordion__head__title  accordion--trigger">
+                        Hinzufügen
+                    </div>
+                    <div class="accordion__head__right  accordion--trigger">
+                        <div class="badge">
+                            Badge
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion__body">
+                    <div class="formularUndButton">
+                        <div class="formularWrapper">
+                            <div class="formular"><input class="input" type="text" placeholder="Name" required>
+                            </div>
+                            <div class="formular"><input class="input" type="text" placeholder="E-Mail" required>
+                            </div>
+                            <div class="formular"><input class="input" type="text" placeholder="Deine Site" required>
+                            </div>
+                            <div class="formular"><textarea class="input" placeholder="Füge einen Kommentar hinzu (optional)"
+                                    type="text"></textarea></div>
+                        </div>
+                        <div style="text-align: center; justify-content: center; margin: 10px;">
+                            <button class="button">Registrieren</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
     <script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>
+    <script src="https://api.chayns-static.space/ui/v4.0/chayns-ui.min.js"></script>
     <script src="https://polyfillsvc.tobit.com/polyfill.min.js?flags=gated&features=default,es6,Map,fetch"></script>
-</div>
 </body>
+
 </html>
