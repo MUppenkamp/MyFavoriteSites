@@ -7,14 +7,18 @@ class TappProject {
     }
 
 
-    _setDomElements() {
-
-    };
+    // _setDomElements() {
+    //     let link =`//chayns.tobit.com/storage/${linkId}/Images/icon-72.png?_=1565958881888`;
+    //     let $linkId = 
+    // };
 
     _getDataFetch() {
         fetch("https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50")
-            .then((response) => { return response.json() })
-            .then((data) => { this._createList(data.Data) })
-            .catch((err) => { console.log(err) });
+            .then((response) => { 
+                return response.json() 
+            }).then((data) => { 
+                this._createAccordion(data.Data) 
+            }).catch((err) => { 
+                console.log(err) });
     };
 }
