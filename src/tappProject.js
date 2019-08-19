@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import './css/style.scss';
 
 export default class TappProject {
+=======
+// LINK = `//chayns.tobit.com/storage/${site.siteId}/Images/icon-72.png?_=1565958881888`
+
+class TappProject {
+>>>>>>> getDataFetch
     constructor() {
         this._setDomElements();
         this._getDataFetch();
     }
 
 
+<<<<<<< HEAD
     _setDomElements() {
         this.$sitesAccordion = document.querySelector('.cc__list');
     };
@@ -55,4 +62,20 @@ export default class TappProject {
         this.$everyItem = document.querySelectorAll('.cc__list');
     };
 
+=======
+    // _setDomElements() {
+    //     let link =`//chayns.tobit.com/storage/${linkId}/Images/icon-72.png?_=1565958881888`;
+    //     let $linkId = 
+    // };
+
+    _getDataFetch() {
+        fetch("https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50")
+            .then((response) => { 
+                return response.json() 
+            }).then((data) => { 
+                this._createAccordion(data.Data) 
+            }).catch((err) => { 
+                console.log(err) });
+    };
+>>>>>>> getDataFetch
 }
