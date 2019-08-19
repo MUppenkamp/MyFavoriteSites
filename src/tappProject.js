@@ -1,5 +1,3 @@
-import './css/style.scss';
-
 export default class TappProject {
     constructor() {
         this._setDomElements();
@@ -32,7 +30,7 @@ export default class TappProject {
             
             accordionItem.classList.add('accordion__item');
             accordionItem.classList.add('list-item--clickable');
-            logo.classList.add('list-item__image');
+            logo.classList.add('image');
             subline.classList.add('subline'); 
             
 
