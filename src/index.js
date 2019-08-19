@@ -1,15 +1,14 @@
-import login from './utils/login';
-import './app.scss';
-import './css/style.scss'
-import { fetch } from 'whatwg-fetch'
+import './css/style.scss';
+import TappProject from './tappProject.js';
 
 const init = async () => {
     try {
         await chayns.ready;
+        chayns.ui.initAll();
+        new TappProject();
     } catch (err) {
         console.error('No chayns environment found', err);
     }
 };
 
 init();
-chayns.ui.initAll();

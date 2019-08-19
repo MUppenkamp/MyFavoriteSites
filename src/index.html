@@ -16,15 +16,9 @@
 <body>
     <div class="tapp">
 
-        <div class="tapp__intro">
-            <h1>My favorite Sites</h1>
-            <p>Hier findest du meine Lieblinsseeiten!</p>
-            <p>Du denkst, dass du eine ausergewöhnliche Seite hast? Dann registriere dich hier.</p>
-        </div>
-
         <div class="tapp__content">
 
-            <div class="accordion" data-group="1">
+            <div class="accordion favList accordion--open"  data-group="1">
                 <div class="accordion__head">
                     <div class="accordion__head__icon accordion--trigger">
                         <i class="ts-angle-right"></i>
@@ -35,62 +29,14 @@
                 </div>
 
                 <div class="accordion__body">
-                    <div class="itemWrapper">
-                        <div class="accordion__item" >
-                            <div class="imageWrapper">
-                                <img class="image"
-                                    src="//chayns.tobit.com/storage/77893-11872/Images/icon-72.png?_=1565958881888"
-                                    style="width: 100%" alt="">
-                            </div>
-                            <div class="subline">
-                                your-concerts
-                            </div>
-                        </div>
-                        <div class="accordion__item" >
-                            <div class="imageWrapper">
-                                <img class="image"
-                                    src="//chayns.tobit.com/storage/64944-20536/Images/icon-72.png?_=1565958881888"
-                                    style="width: 100%" alt="">
-                            </div>
-                            <div class="subline">
-                                I love my French Bulldog
-                            </div>
-                        </div>
-                        <div class="accordion__item" >
-                            <div class="imageWrapper">
-                                <img class="image"
-                                    src="//chayns.tobit.com/storage/77893-11893/Images/icon-72.png?_=1565958865653"
-                                    style="width: 100%" alt="">
-                            </div>
-                            <div class="subline">
-                                Marvins Cupcake
-                            </div>
-                        </div>
-                        <div class="accordion__item" >
-                            <div class="imageWrapper">
-                                <img class="image"
-                                    src="//chayns.tobit.com/storage/77893-11833/Images/icon-72.png?_=1565960418734"
-                                    style="width: 100%" alt="">
-                            </div>
-                            <div class="subline">
-                                Dreiviertel
-                            </div>
-                        </div>
-                        <div class="accordion__item" >
-                            <div class="imageWrapper">
-                                <img class="image"
-                                    src="https://upload.wikimedia.org/wikipedia/en/e/e0/WPVG_icon_2016.svg"
-                                    style="width: 100%" alt="">
-                            </div>
-                            <div class="subline">
-                                Name
-                            </div>
-                        </div>
+                    <div class="cc__list list--expandable">
+                        <!-- Hier wird die Liste erstellt -->
+
                     </div>
                 </div>
             </div>
 
-            <div class="accordion" data-group="1">
+            <div class="accordion formAcc" data-group="1">
                 <div class="accordion__head">
                     <div class="accordion__head__icon accordion--trigger">
                         <i class="ts-angle-right"></i>
@@ -103,15 +49,16 @@
                 <div class="accordion__body">
                     <div class="formularUndButton">
                         <div class="formularWrapper">
-                            <div class="formular"><input class="input" type="text" placeholder="Name" required>
+                            <div><input class="input formularName" type="text" placeholder="Name*" required>
                             </div>
-                            <div class="formular"><input class="input" type="text" placeholder="E-Mail" required>
+                            <div><input class="input formularEMail" type="text" placeholder="E-Mail*" required>
                             </div>
-                            <div class="formular"><input class="input" type="text" placeholder="Deine Site" required>
+                            <div><input class="input formularSite" type="text" placeholder="Deine Site*" required>
                             </div>
-                            <div class="formular"><textarea class="input" placeholder="Füge einen Kommentar hinzu (optional)"
-                                    type="text"></textarea></div>
+                            <div><textarea class="input formularComment"
+                                    placeholder="Füge einen Kommentar hinzu (optional)" type="text"></textarea></div>
                         </div>
+                        <div style="margin-left: 15px; font-size: 12px">*Pflichtfeld</div>
                         <div style="text-align: center; justify-content: center; margin: 10px;">
                             <button class="button">Registrieren</button>
                         </div>
