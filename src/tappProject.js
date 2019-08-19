@@ -1,4 +1,3 @@
-// LINK = `//chayns.tobit.com/storage/${site.siteId}/Images/icon-72.png?_=1565958881888`
 import './css/style.scss';
 
 export default class TappProject {
@@ -25,8 +24,8 @@ export default class TappProject {
 
     _createFavList(data) {
         data.forEach(site => {
-            const itemWrapper = document.createElement('div');
-            const imageWrapper = document.createElement('div');
+            // const itemWrapper = document.createElement('div');
+            // const imageWrapper = document.createElement('div');
             const accordionItem = document.createElement('div');
             const logo = document.createElement('img');
             const subline = document.createElement('div');
@@ -34,23 +33,24 @@ export default class TappProject {
             accordionItem.classList.add('accordion__item');
             accordionItem.classList.add('list-item--clickable');
             logo.classList.add('list-item__image');
-            subline.classList.add('list-item__subtitle'); //subline
-            subline.classList.add('ellipsis');
+            subline.classList.add('subline'); 
+            
 
-            itemWrapper.appendChild(accordionItem);
-            accordionItem.appendChild(imageWrapper);
-            imageWrapper.appendChild(logo);
+            // itemWrapper.appendChild(accordionItem);
+            accordionItem.appendChild(logo);
+            // imageWrapper.appendChild(logo);
             accordionItem.appendChild(subline);
 
             try{
-            logo.style.backgroundImage = `url("https://chayns.tobit.com/storage/${site.siteId}/Images/icon-72.png")`;
+            logo.style.backgroundImage = `url('https://chayns.tobit.com/storage/${site.siteId}/Images/icon-72.png')`;
             } catch(err) {
-                logo.style.backgroundImaga = css/chaynsIcon.png; }
+                logo.style.backgroundImage = `url('css/chaynsIcon.png')`;
+            }
 
             subline.innerHTML = site.appstoreName;
-            accordionItem.addEventListener("click", () => chayns.openUrlInBrowser(`http://chayns.net/${site.siteId}/`));
+            accordionItem.addEventListener('click', () => chayns.openUrlInBrowser(`http://chayns.net/${site.siteId}/`));
 
-            this.$sitesAccordion.appendChild(itemWrapper);
+            this.$sitesAccordion.appendChild(accordionItem);
         })
         this.$everyItem = document.querySelectorAll('.cc__list');
     };
