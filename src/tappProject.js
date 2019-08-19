@@ -11,8 +11,8 @@ export default class TappProject {
     }
 
     _setDomElements() {
-        this.$tapp = document.querySelector('.tapp');
-        _intro(this.$tapp);
+        this.$tapp__intro = document.querySelector('.tapp__intro');
+        _intro(this.$tapp__intro);
         // this.$tappContent = document.querySelector('tapp__content');
 
         this.$favList = document.querySelector('.favList');
@@ -61,40 +61,4 @@ export default class TappProject {
             this.$sitesAccordion.appendChild(accordionItem);
         })
     };
-
-    // _formular() {
-    //     if (this.$formularName.value.length < 1 || this.$formularEMail.value.length < 1 || this.$formularSite.value.length < 1) {
-    //         chayns.dialog.alert('Oops', 'Bitte alle Pflichfelder ausfüllen.');
-    //     }
-    //     else if (this._emailValidation(this.$formularEMail.value) && this._urlValidation(this.$formularSite.value)) {
-    //         chayns.intercom.sendMessageToPage({
-    //             text: `Name: ${this.$formularName.value} 
-    //                         E-Mail: ${this.$formularEMail.value} 
-    //                         Site: ${this.$formularSite.value} 
-    //                         Kommentar: ${this.$formularComment.value}`
-    //         }).then((data) => {
-    //             if (data.status === 200)
-    //                 chayns.dialog.alert('Danke, ' + chayns.env.user.firstName + '!');
-    //         });
-    //     }
-    //     else {
-    //         chayns.dialog.alert('Oops', 'E-Mail oder Internetseite falsch.')
-    //     }
-    // };
-
-    // _emailValidation(email) {
-    //     var abc = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     return abc.test(String(email).toLowerCase());
-    // }
-
-    // _urlValidation(url) {
-    //     var pattern = new RegExp('^(https?:\\/\\/)?' +
-    //         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
-    //         '((\\d{1,3}\\.){3}\\d{1,3}))' +
-    //         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
-    //         '(\\?[;&a-z\\d%_.~+=-]*)?' +
-    //         '(\\#[-a-z\\d_]*)?$', 'i');
-    //     return pattern.test(url);
-    // };
-
 }
