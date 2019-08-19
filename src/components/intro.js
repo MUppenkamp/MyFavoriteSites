@@ -13,5 +13,5 @@ export const _intro = (tappIntro) => {
 
     title.innerText = 'My favorite Sites';
     firstP.innerText = 'Hier findest du meine Lieblinsseeiten!';
-    secondP.innerText = 'Du denkst, dass du eine ausergewöhnliche Seite hast? Dann registriere dich hier';
+    secondP.innerText = 'Du denkst, dass du eine ausergewöhnliche Seite hast? Dann registriere dich hier.';
 }
