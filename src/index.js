@@ -1,4 +1,4 @@
-import login from './utils/login';
+import { _formular, _emailValidation } from './utils/formular.js';
 import './app.scss';
 import './css/style.scss';
 import TappProject from './tappProject.js';

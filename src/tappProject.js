@@ -4,7 +4,6 @@ export default class TappProject {
         this._getDataFetch();
     }
 
-
     _setDomElements() {
         this.$sitesAccordion = document.querySelector('.cc__list');
         this.$formularName = document.querySelector('.formularName');
@@ -18,7 +17,7 @@ export default class TappProject {
     };
 
     _getDataFetch() {
-        fetch("https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50")
+        fetch('https://chayns1.tobit.com/TappApi/Site/SlitteApp?SearchString=love&Skip=0&Take=50')
             .then((response) => {
                 return response.json()
             }).then((json) => {
@@ -58,40 +57,5 @@ export default class TappProject {
 
             this.$sitesAccordion.appendChild(accordionItem);
         })
-        this.$everyItem = document.querySelectorAll('.cc__list');
     };
-
-    _formular() {
-        if (this.$formularName.value.length < 1 || this.$formularEMail.value.length < 1 || this.$formularSite.value.length < 1) {
-            chayns.dialog.alert('Oops', 'Bitte alle Pflichfelder ausfüllen.');
-        }
-        else if (this._emailValidation(this.$formularEMail.value)) {
-            chayns.intercom.sendMessageToPage({
-                text: `Name: ${this.$formularName.value} 
-                        E-Mail: ${this.$formularEMail.value} 
-                        Site: ${this.$formularSite.value} 
-                        Kommentar: ${this.$formularComment.value}`
-            }).then((data) => {
-                if (data.status === 200)
-                    chayns.dialog.alert('Danke, ' + chayns.env.user.firstName + '!');
-            });//.then(() => {
-            //     this.$formularWrapper.classList.remove('accordion--open');
-            //     this.$sitesAccordion.classList.add('accordion--open');
-            // });
-        }
-        else {
-            chayns.dialog.alert('Oops', 'E-Mail oder Internetseite falsch.')
-        }
-    };
-
-    _emailValidation(email) {
-        var abc = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return abc.test(String(email).toLowerCase());
-    }
 }
-
-
-// _here() {
-//     this.$topList.classList.remove("accordion--open");
-//     this.$form.classList.add("accordion--open");
-// }
